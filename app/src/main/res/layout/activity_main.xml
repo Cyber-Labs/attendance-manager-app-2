@@ -1,9 +1,25 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp" tools:context=".MainActivity">
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nav_drawer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include layout="@layout/nav_act"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,6 +162,14 @@
         android:layout_marginTop="47dp"
         android:layout_toEndOf="@+id/textView3"
         android:layout_toRightOf="@+id/textView3" />
+    </RelativeLayout>
+    </LinearLayout>
+<android.support.design.widget.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:menu="@menu/nav_menu"
+    app:headerLayout="@layout/nav_headder"
+    android:layout_gravity="start">
+</android.support.design.widget.NavigationView>
 
-
-</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

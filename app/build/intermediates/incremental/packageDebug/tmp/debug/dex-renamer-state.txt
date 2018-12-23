@@ -1,0 +1,4 @@
+#Sun Dec 23 12:23:05 IST 2018
+base.0=C\:\\git\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
