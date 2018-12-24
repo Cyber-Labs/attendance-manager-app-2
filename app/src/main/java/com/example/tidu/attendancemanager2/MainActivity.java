@@ -3,6 +3,7 @@ package com.example.tidu.attendancemanager2;
 import android.app.AlertDialog;
 import android.database.Cursor;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.widget.Toolbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,10 +25,21 @@ public class MainActivity extends AppCompatActivity {
     Button btnDelete;
     private DrawerLayout DrawerLayout1;
     Button btnviewUpdate;
+    private ActionBarDrawerToggle mToggle;
+    private android.support.v7.widget.Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.nav_act);
+        setSupportActionBar(mToolbar);
+        DrawerLayout1 = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mToggle=new ActionBarDrawerToggle(this,DrawerLayout1,R.string.open,R.string.close);
+        DrawerLayout1.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         myDb = new DatabaseHelper(this);
 
         editName = (EditText)findViewById(R.id.editText_name);
@@ -44,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         UpdateData();
         DeleteData();
 
-        DrawerLayout1 = findViewById(R.id.drawer_layout);
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
@@ -264,6 +275,11 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-
+@Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }return super.onOptionsItemSelected(item);
+}
 
 }

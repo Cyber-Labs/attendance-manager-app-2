@@ -5,10 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/drawer_layout">
+    
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<RelativeLayout
+    <include layout="@layout/nav_act"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" />
+
+
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingTop="15dp">
+
+     
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,14 +170,15 @@
         android:layout_toEndOf="@+id/textView3"
         android:layout_toRightOf="@+id/textView3" />
     </RelativeLayout>
-
+    </LinearLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_headder"
+        android:fitsSystemWindows="true"
         />
 
 
