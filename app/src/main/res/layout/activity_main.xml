@@ -6,9 +6,26 @@
     tools:context=".MainActivity"
     android:id="@+id/drawer_layout">
 
-<RelativeLayout
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/nav_act"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" />
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp">
+
+        <include layout="@layout/nav_act"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,14 +169,14 @@
         android:layout_toEndOf="@+id/textView3"
         android:layout_toRightOf="@+id/textView3" />
     </RelativeLayout>
-
-    <android.support.design.widget.NavigationView
+</LinearLayout>    <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_headder"
+        android:fitsSystemWindows="true"
         />
 
 

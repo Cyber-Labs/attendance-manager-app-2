@@ -994,6 +994,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bin
+drawable books
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1020,6 +1022,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable student
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1094,8 +1097,6 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
-id editText
-id editText2
 id editText_abs
 id editText_id
 id editText_minimum
@@ -1138,10 +1139,13 @@ id list_item
 id masked
 id message
 id middle
+id minAdd
 id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_act
+id nav_headder
 id nav_view
 id navigation_header_container
 id never
@@ -1204,6 +1208,7 @@ id src_over
 id standard
 id start
 id stretch
+id subjectAdd
 id submenuarrow
 id submit_area
 id tabMode
@@ -1311,6 +1316,8 @@ layout dialog_add
 layout dialog_delete
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout nav_act
+layout nav_headder
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1368,10 +1375,12 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
+string close
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string mtrl_chip_close_icon_content_description
+string open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
