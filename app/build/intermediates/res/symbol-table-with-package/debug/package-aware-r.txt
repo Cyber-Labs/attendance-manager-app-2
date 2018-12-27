@@ -1036,6 +1036,8 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id abs
+id absAtt
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1066,10 +1068,6 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
-id button_add
-id button_delete
-id button_update
-id button_viewAll
 id center
 id center_horizontal
 id center_vertical
@@ -1097,11 +1095,6 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
-id editText_abs
-id editText_id
-id editText_minimum
-id editText_name
-id editText_pre
 id edit_query
 id end
 id enterAlways
@@ -1140,6 +1133,7 @@ id masked
 id message
 id middle
 id minAdd
+id minAtten
 id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
@@ -1162,6 +1156,8 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id pres
+id presAtt
 id progress_circular
 id progress_horizontal
 id radio
@@ -1208,6 +1204,8 @@ id src_over
 id standard
 id start
 id stretch
+id subList
+id subject
 id subjectAdd
 id submenuarrow
 id submit_area
@@ -1220,11 +1218,9 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
-id textView2
-id textView3
-id textView_abs
-id textView_id
+id textView11
+id textView4
+id textView6
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1235,6 +1231,7 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id total
 id touch_outside
 id transition_current_scene
 id transition_layout_save
@@ -1324,6 +1321,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout recycler_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
