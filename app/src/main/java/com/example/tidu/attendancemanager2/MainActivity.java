@@ -100,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
                                     else
                                         Toast.makeText(MainActivity.this,"Some Error Occured",Toast.LENGTH_SHORT).show();
 
+                                    itemList = new ArrayList<>();
+                                    Cursor res = myDb.getAllData();
+                                    while(res.moveToNext())
+                                    {
+                                        itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
+                                                res.getString(3),res.getString(4),res.getString(5)));
+                                    }
+                                    mlistAd = new listAdapter(MainActivity.this,itemList);
+                                    subList.setAdapter(mlistAd);
+
                                     add_dialog.dismiss();
                                 }
                             });
@@ -139,6 +149,16 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this,"Data Deleted",Toast.LENGTH_LONG).show();
                                     else
                                         Toast.makeText(MainActivity.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+
+                                    itemList = new ArrayList<>();
+                                    Cursor res = myDb.getAllData();
+                                    while(res.moveToNext())
+                                    {
+                                        itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
+                                                res.getString(3),res.getString(4),res.getString(5)));
+                                    }
+                                    mlistAd = new listAdapter(MainActivity.this,itemList);
+                                    subList.setAdapter(mlistAd);
 
                                     add_dialog2.dismiss();
 
