@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/subj1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="#243037"
+        android:text="Subject" />
+    <EditText
+        android:id="@+id/sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="16dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/mini1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum Attendance"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="#243037"/>
+    <EditText
+        android:id="@+id/min1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"
+        android:inputType="number"
+        android:ems="10"/>
+    <TextView
+        android:id="@+id/pre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Present"
+        android:padding="8dp"
+        android:textColor="#243037"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/pres1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="8dp"
+        android:ems="10"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Absent"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="#243037"/>
+    <EditText
+        android:id="@+id/ab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="number"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/save"
+        android:textSize="20sp"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+        android:text="CANCEL"
+        android:id="@+id/cancel"
+        android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

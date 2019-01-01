@@ -25,12 +25,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
-    EditText editName,editmin,editabs,editpre ,editTextId;
-    Button btnAddData;
-    Button btnviewAll;
-    Button btnDelete;
+   // EditText editName,editmin,editabs,editpre ,editTextId;
+   // Button btnAddData;
+   //Button btnviewAll;
+   // Button btnDelete;
     private DrawerLayout DrawerLayout1;
-    Button btnviewUpdate;
+   // Button btnviewUpdate;
     private ActionBarDrawerToggle mToggle;
     private android.support.v7.widget.Toolbar mToolbar;
     private List<SubjectInfo> itemList;
