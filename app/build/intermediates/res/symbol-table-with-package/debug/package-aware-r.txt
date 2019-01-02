@@ -1036,6 +1036,12 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id T
+id To
+id a
+id a1
+id ab
+id ab1
 id abs
 id absAtt
 id action_bar
@@ -1068,6 +1074,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id cancel
 id center
 id center_horizontal
 id center_vertical
@@ -1095,6 +1102,7 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
+id edit
 id edit_query
 id end
 id enterAlways
@@ -1116,6 +1124,8 @@ id home
 id homeAsUp
 id icon
 id icon_group
+id id
+id id1
 id ifRoom
 id image
 id info
@@ -1132,9 +1142,12 @@ id list_item
 id masked
 id message
 id middle
+id min
+id min1
 id minAdd
 id minAtten
 id mini
+id mini1
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1156,7 +1169,10 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id pre
+id pre1
 id pres
+id pres1
 id presAtt
 id progress_circular
 id progress_horizontal
@@ -1164,6 +1180,7 @@ id radio
 id right
 id right_icon
 id right_side
+id save
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1204,7 +1221,11 @@ id src_over
 id standard
 id start
 id stretch
+id sub
+id sub1
 id subList
+id subj
+id subj1
 id subject
 id subjectAdd
 id submenuarrow
@@ -1295,6 +1316,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout data_edit
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1325,6 +1347,7 @@ layout recycler_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout subject_details
 layout support_simple_spinner_dropdown_item
 menu drawer_view
 mipmap ic_launcher

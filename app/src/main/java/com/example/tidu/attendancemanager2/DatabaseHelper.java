@@ -57,7 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean updateData(String id,String name,String minimum,String presents,String absents,String current) {
+    public boolean updateData(String id,String name,String minimum,String presents,String absents) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,id);
@@ -65,12 +65,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_3,minimum);
         contentValues.put(COL_4,presents);
         contentValues.put(COL_5,absents);
-        contentValues.put(COL_6,current);
 
         db.update(TABLE_NAME, contentValues, "ID = ?",new String[] { id });
         return true;
     }
-
+     public Cursor getItemId(String name){
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="SELECT"+COL_1+"FROM"+TABLE_NAME+"WHERE"+COL_2+"="+name+";";
+        Cursor data=db.rawQuery(query,null);
+        return data;
+     }
     public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "NAME = ?",new String[] {id});
