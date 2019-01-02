@@ -16,19 +16,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.Toast;
 import android.widget.Toolbar;
-
+import com.example.tidu.attendancemanager2.listAdapter.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
-    EditText editName,editmin,editabs,editpre ,editTextId;
-    Button btnAddData;
-    Button btnviewAll;
-    Button btnDelete;
+
+    Cursor c;
     private DrawerLayout DrawerLayout1;
     Button btnviewUpdate;
     private ActionBarDrawerToggle mToggle;
@@ -56,13 +55,34 @@ public class MainActivity extends AppCompatActivity {
         while(res.moveToNext())
         {
             itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                    res.getString(3),res.getString(4),res.getString(5)));
+                    res.getString(3),res.getString(4)));
         }
         mlistAd = new listAdapter(this,itemList);
         mlayoutManager = new LinearLayoutManager(this);
         subList.setAdapter(mlistAd);
         subList.setLayoutManager(mlayoutManager);
+         mlistAd.setOnItemClickListener(new OnItemClickListener() {
+             @Override
+             public void onPreClick(int position) {
+                 
+                 c = myDb.getAllData();
+                 c.moveToPosition(position);
+                 String id = c.getString(c.getColumnIndexOrThrow("ID"));
+                 String name = c.getString(c.getColumnIndexOrThrow("NAME"));
+                 String minimum = c.getString(c.getColumnIndexOrThrow("MINIMUM"));
+                 String presents = c.getString(c.getColumnIndexOrThrow("PRESENTS"));
+                 String absents = c.getString(c.getColumnIndexOrThrow("ABSENTS"));
+                 int preupd = Integer.parseInt(presents);
+                 preupd++;
+                 String present = String.valueOf(preupd);
+                boolean val =  myDb.updateData(id,name,minimum,present,absents);
+                 if(val)
+                 {
 
+                     mlistAd.notifyDataSetChanged();
+                 }
+             }
+         });
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
@@ -94,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                                 public void onClick(View v) {                      //intructions to be performed if add button is clicked
                                     String subject = sub.getText().toString();//stores the value of subject typed
                                     String minimum = min.getText().toString();//stores the minimum attendence
-                                    boolean isinserted=myDb.insertData(subject,minimum,"0","0","0");//inserts data
+                                    boolean isinserted=myDb.insertData(subject,minimum,"0","0");//inserts data
                                     if(isinserted)
                                         Toast.makeText(MainActivity.this,"Data added",Toast.LENGTH_SHORT).show();
                                     else
@@ -105,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                                     while(res.moveToNext())
                                     {
                                         itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                                res.getString(3),res.getString(4),res.getString(5)));
+                                                res.getString(3),res.getString(4)));
                                     }
                                     mlistAd = new listAdapter(MainActivity.this,itemList);
                                     subList.setAdapter(mlistAd);
@@ -155,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                                     while(res.moveToNext())
                                     {
                                         itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                                res.getString(3),res.getString(4),res.getString(5)));
+                                                res.getString(3),res.getString(4)));
                                     }
                                     mlistAd = new listAdapter(MainActivity.this,itemList);
                                     subList.setAdapter(mlistAd);
