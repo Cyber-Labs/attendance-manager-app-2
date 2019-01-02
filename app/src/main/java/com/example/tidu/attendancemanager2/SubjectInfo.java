@@ -2,15 +2,15 @@ package com.example.tidu.attendancemanager2;
 
 public class SubjectInfo {
     int id;
-    String name,minimum,pres,abs,current;
+    String name,minimum,pres,abs;
 
-    public SubjectInfo(int id, String name, String minimum, String pres, String abs, String current) {
+    public SubjectInfo(int id, String name, String minimum, String pres, String abs) {
         this.id = id;
         this.name = name;
         this.minimum = minimum;
         this.pres = pres;
         this.abs = abs;
-        this.current = current;
+
     }
 
     public int getId() {
@@ -53,11 +53,4 @@ public class SubjectInfo {
         this.abs = abs;
     }
 
-    public String getCurrent() {
-        return current;
-    }
-
-    public void setCurrent(String current) {
-        this.current = current;
-    }
 }
