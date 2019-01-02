@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
     public listViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         View v = inflater.inflate(R.layout.recycler_list,viewGroup,false);
-        return new listViewHolder(v);
+        return new listViewHolder(v,mListener);
     }
 
     @Override
@@ -50,15 +51,43 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
         notifyDataSetChanged();
     }
 
+    private  OnItemClickListener mListener;
+    public interface OnItemClickListener{
+
+        void onPreClick(int position);
+
+    }
+    public void setOnItemClickListener(OnItemClickListener listener)
+    {
+         mListener = listener;
+    }
+
     public class listViewHolder extends RecyclerView.ViewHolder{
         TextView sub,mini,pres,tot;
+        Button presatt,absatt;
 
-        public listViewHolder(@NonNull View itemView) {
+        public listViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             sub = (TextView) itemView.findViewById(R.id.subject);
             mini = (TextView) itemView.findViewById(R.id.minAtten);
             pres = (TextView) itemView.findViewById(R.id.pres);
             tot = (TextView) itemView.findViewById(R.id.total);
+            presatt = (Button)itemView.findViewById(R.id.presAtt);
+
+            presatt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener != null)
+                    {
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION)
+                        {
+                            listener.onPreClick(position);
+                        }
+
+                    }
+                }
+            });
         }
     }
 }
