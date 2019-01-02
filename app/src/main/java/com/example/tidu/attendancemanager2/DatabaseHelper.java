@@ -6,18 +6,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by ProgrammingKnowledge on 4/3/2015.
- */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Student.db";
     public static final String TABLE_NAME = "student_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
-    public static final String COL_3 = "minimum";
-    public static final String COL_4 = "presents";
-    public static final String COL_5 = "absents";
-    public static final String COL_6 = "current";
+    public static final String COL_3 = "MINIMUM";
+    public static final String COL_4 = "PRESENTS";
+    public static final String COL_5 = "ABSENTS";
+
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -25,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,MINIMUM TEXT,PRESENTS TEXT,ABSENTS TEXT,CURRENT TEXT)");
+        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,MINIMUM TEXT,PRESENTS TEXT,ABSENTS TEXT)");
     }
 
     @Override
@@ -34,14 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String name,String minimum,String presents,String absents,String current ) {
+    public boolean insertData(String name,String minimum,String presents,String absents ) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,name);
         contentValues.put(COL_3,minimum);
         contentValues.put(COL_4,presents);
         contentValues.put(COL_5,absents);
-        contentValues.put(COL_6,current);
+
 
 
         long result = db.insert(TABLE_NAME,null ,contentValues);
@@ -57,7 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean updateData(String id,String name,String minimum,String presents,String absents,String current) {
+    public boolean updateData(String id,String name,String minimum,String presents,String absents) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,id);
@@ -65,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_3,minimum);
         contentValues.put(COL_4,presents);
         contentValues.put(COL_5,absents);
-        contentValues.put(COL_6,current);
+
 
         db.update(TABLE_NAME, contentValues, "ID = ?",new String[] { id });
         return true;
