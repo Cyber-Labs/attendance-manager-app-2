@@ -21,10 +21,11 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import android.widget.ListAdapter;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
+    Cursor c;
    // EditText editName,editmin,editabs,editpre ,editTextId;
    // Button btnAddData;
    //Button btnviewAll;
@@ -62,6 +63,60 @@ public class MainActivity extends AppCompatActivity {
         mlayoutManager = new LinearLayoutManager(this);
         subList.setAdapter(mlistAd);
         subList.setLayoutManager(mlayoutManager);
+        mlistAd.setOnItemClickListener(new listAdapter.OnItemClickListener() {
+            @Override
+            public void onPreClick(int position) {
+                c = myDb.getAllData();
+                c.moveToPosition(position);
+                String id = c.getString(c.getColumnIndexOrThrow("ID"));
+                String name = c.getString(c.getColumnIndexOrThrow("NAME"));
+                String minimum = c.getString(c.getColumnIndexOrThrow("MINIMUM"));
+                String presents = c.getString(c.getColumnIndexOrThrow("PRESENTS"));
+                String absents = c.getString(c.getColumnIndexOrThrow("ABSENTS"));
+                int preupd = Integer.parseInt(presents);
+                preupd++;
+                String present = String.valueOf(preupd);
+                boolean val =  myDb.updateData(id,name,minimum,present,absents);
+                List<SubjectInfo> viewModels = itemList;
+                String x = "nothing";
+                viewModels.add(new SubjectInfo(Integer.parseInt(id),name,minimum,present,absents,x));
+
+                if(val)
+                {
+                    itemList.clear();
+                    itemList.addAll(viewModels);
+                    mlistAd.notifyItemChanged(position);
+
+                }
+
+
+
+
+
+            }
+
+            @Override
+            public void onAbsClick(int position) {
+                c = myDb.getAllData();
+                c.moveToPosition(position);
+                String id = c.getString(c.getColumnIndexOrThrow("ID"));
+                String name = c.getString(c.getColumnIndexOrThrow("NAME"));
+                String minimum = c.getString(c.getColumnIndexOrThrow("MINIMUM"));
+                String presents = c.getString(c.getColumnIndexOrThrow("PRESENTS"));
+                String absents = c.getString(c.getColumnIndexOrThrow("ABSENTS"));
+                int absupd = Integer.parseInt(absents);
+                absupd++;
+                String absent = String.valueOf(absupd);
+                boolean val = myDb.updateData(id,name,minimum,presents,absent);
+                List<SubjectInfo> viewModels = itemList;
+                viewModels.add(new SubjectInfo(Integer.parseInt(id),name,minimum,presents,absent,"nothing"));
+                if(val)
+                {
+
+                    mlistAd.updateData(viewModels);
+                }
+            }
+        });
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
