@@ -6,18 +6,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by ProgrammingKnowledge on 4/3/2015.
- */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Student.db";
     public static final String TABLE_NAME = "student_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
-    public static final String COL_3 = "minimum";
-    public static final String COL_4 = "presents";
-    public static final String COL_5 = "absents";
-    public static final String COL_6 = "current";
+    public static final String COL_3 = "MINIMUM";
+    public static final String COL_4 = "PRESENTS";
+    public static final String COL_5 = "ABSENTS";
+    public static final String COL_6 = "CURRENT";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
