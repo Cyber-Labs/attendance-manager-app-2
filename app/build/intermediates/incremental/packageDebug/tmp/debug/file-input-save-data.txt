@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Sat Dec 29 21:34:57 IST 2018
+#Sat Jan 05 23:05:36 IST 2019
 0.baseType=DIRECTORY
-0.base=C\:\\git\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.base=C\:\\Users\\info\\Desktop\\kk\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.path=classes.dex
 0.set=DEX
 count=1
