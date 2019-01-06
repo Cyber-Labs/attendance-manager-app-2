@@ -59,64 +59,23 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
                     res.getString(3),res.getString(4),res.getString(5)));
         }
-        mlistAd = new listAdapter(this,itemList);
+        mlistAd = new listAdapter(this, itemList, new onClickListnerPlusMinus() {
+            @Override
+            public void onClickedMinus(int position,String sub,int a) {
+                String ab = Integer.toString(a);
+                myDb.updateabs(sub,ab);
+            }
+
+            @Override
+            public void onClickedPlus(int position,String sub,int p) {
+                String pr = Integer.toString(p);
+                myDb.updatepres(sub,pr);
+            }
+        });
         mlayoutManager = new LinearLayoutManager(this);
         subList.setAdapter(mlistAd);
         subList.setLayoutManager(mlayoutManager);
-        mlistAd.setOnItemClickListener(new listAdapter.OnItemClickListener() {
-            @Override
-            public void onPreClick(int position) {
-                c = myDb.getAllData();
-                c.moveToPosition(position);
-                String id = c.getString(c.getColumnIndexOrThrow("ID"));
-                String name = c.getString(c.getColumnIndexOrThrow("NAME"));
-                String minimum = c.getString(c.getColumnIndexOrThrow("MINIMUM"));
-                String presents = c.getString(c.getColumnIndexOrThrow("PRESENTS"));
-                String absents = c.getString(c.getColumnIndexOrThrow("ABSENTS"));
-                int preupd = Integer.parseInt(presents);
-                preupd++;
-                String present = String.valueOf(preupd);
-                boolean val =  myDb.updateData(id,name,minimum,present,absents);
-                List<SubjectInfo> viewModels = itemList;
-                String x = "nothing";
-                viewModels.add(new SubjectInfo(Integer.parseInt(id),name,minimum,present,absents,x));
 
-                if(val)
-                {
-                    itemList.clear();
-                    itemList.addAll(viewModels);
-                    mlistAd.notifyItemChanged(position);
-
-                }
-
-
-
-
-
-            }
-
-            @Override
-            public void onAbsClick(int position) {
-                c = myDb.getAllData();
-                c.moveToPosition(position);
-                String id = c.getString(c.getColumnIndexOrThrow("ID"));
-                String name = c.getString(c.getColumnIndexOrThrow("NAME"));
-                String minimum = c.getString(c.getColumnIndexOrThrow("MINIMUM"));
-                String presents = c.getString(c.getColumnIndexOrThrow("PRESENTS"));
-                String absents = c.getString(c.getColumnIndexOrThrow("ABSENTS"));
-                int absupd = Integer.parseInt(absents);
-                absupd++;
-                String absent = String.valueOf(absupd);
-                boolean val = myDb.updateData(id,name,minimum,presents,absent);
-                List<SubjectInfo> viewModels = itemList;
-                viewModels.add(new SubjectInfo(Integer.parseInt(id),name,minimum,presents,absent,"nothing"));
-                if(val)
-                {
-
-                    mlistAd.updateData(viewModels);
-                }
-            }
-        });
 
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -162,7 +121,19 @@ public class MainActivity extends AppCompatActivity {
                                         itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
                                                 res.getString(3),res.getString(4),res.getString(5)));
                                     }
-                                    mlistAd = new listAdapter(MainActivity.this,itemList);
+                                    mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
+                                        @Override
+                                        public void onClickedMinus(int position, String sub, int a) {
+                                            String ab = Integer.toString(a);
+                                            myDb.updateabs(sub,ab);
+                                        }
+
+                                        @Override
+                                        public void onClickedPlus(int position,String sub, int p) {
+                                            String pr = Integer.toString(p);
+                                            myDb.updatepres(sub,pr);
+                                        }
+                                    });
                                     subList.setAdapter(mlistAd);
 
                                     add_dialog.dismiss();
@@ -212,7 +183,19 @@ public class MainActivity extends AppCompatActivity {
                                         itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
                                                 res.getString(3),res.getString(4),res.getString(5)));
                                     }
-                                    mlistAd = new listAdapter(MainActivity.this,itemList);
+                                    mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
+                                        @Override
+                                        public void onClickedMinus(int position,String sub, int a) {
+                                            String ab = Integer.toString(a);
+                                            myDb.updateabs(sub,ab);
+                                        }
+
+                                        @Override
+                                        public void onClickedPlus(int position,String sub, int p) {
+                                            String pr = Integer.toString(p);
+                                            myDb.updatepres(sub,pr);
+                                        }
+                                    });
                                     subList.setAdapter(mlistAd);
 
                                     add_dialog2.dismiss();

@@ -1,0 +1,4 @@
+#Sun Jan 06 14:20:40 IST 2019
+base.0=C\:\\Users\\info\\Desktop\\kk\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex

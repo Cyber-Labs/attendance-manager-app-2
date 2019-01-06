@@ -1042,7 +1042,6 @@ id a
 id a1
 id ab
 id ab1
-id abs
 id absAtt
 id action_bar
 id action_bar_activity_content
@@ -1124,7 +1123,6 @@ id home
 id homeAsUp
 id icon
 id icon_group
-id id
 id id1
 id ifRoom
 id image

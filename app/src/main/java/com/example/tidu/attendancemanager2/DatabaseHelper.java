@@ -81,4 +81,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("delete from "+ TABLE_NAME);
     }
+    public  boolean updatepres(String sub,String p){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues data=new ContentValues();
+        data.put(COL_4,p);
+        db.update(TABLE_NAME, data, "NAME = ?",new String[] { sub });
+        return  true;
+    }
+    public  boolean updateabs(String sub,String a){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues data=new ContentValues();
+        data.put(COL_5,a);
+        db.update(TABLE_NAME, data, "NAME = ?",new String[] { sub });
+        return  true;
+
+    }
 }

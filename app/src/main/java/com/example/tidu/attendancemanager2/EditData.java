@@ -36,6 +36,7 @@ public class EditData extends AppCompatActivity {
         A=receivintent.getStringExtra("A");
         ID=receivintent.getStringExtra("ID");
 
+
         E1.setText(N);
         E2.setText(M);
         E3.setText(P);
@@ -52,6 +53,7 @@ public class EditData extends AppCompatActivity {
                 if(!item2.equals("") && !item1.equals("") && !item3.equals("") && !item4.equals("")) {
                     mDb.updateData(ID,item1,item2,item3,item4);
                     Toast.makeText(EditData.this,"Data saved.",Toast.LENGTH_SHORT).show();
+
                     finish();
                 }
                 else{

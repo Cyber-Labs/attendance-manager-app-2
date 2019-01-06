@@ -18,10 +18,12 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
     Context mContext;
     List<SubjectInfo> itemList;
     DatabaseHelper mdb;
+    public  onClickListnerPlusMinus onClickListnerPlusMinus;
 
-    public listAdapter(Context mContext, List<SubjectInfo> itemList) {
+    public listAdapter(Context mContext, List<SubjectInfo> itemList,onClickListnerPlusMinus onClickListnerPlusMinus) {
         this.mContext = mContext;
         this.itemList = itemList;
+        this.onClickListnerPlusMinus=onClickListnerPlusMinus;
     }
 
     @NonNull
@@ -29,20 +31,22 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
     public listViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         View v = inflater.inflate(R.layout.recycler_list,viewGroup,false);
-        return new listViewHolder(v,mListener);
+        return new listViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull listViewHolder holder, final int i) {
+    public void onBindViewHolder(@NonNull final listViewHolder holder, final int i) {
         holder.sub.setText(itemList.get(i).getName());
         holder.mini.setText(itemList.get(i).getMinimum());
         holder.pres.setText(itemList.get(i).getPres());
-        int pre = Integer.parseInt(itemList.get(i).getPres());
+         int pre = Integer.parseInt(itemList.get(i).getPres());
         int ab = Integer.parseInt(itemList.get(i).getAbs());
-        int x = pre + ab;
-        final String total = Integer.toString(x);
+         int tot1 = pre + ab;
+        final String total = Integer.toString(tot1);
         holder.tot.setText(total);
-        holder.id.setText(Integer.toString(itemList.get(i).getId()));
+        final String sub = (String) holder.sub.getText();
+        final int a =ab++;
+
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +62,32 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
 
 
         });
+        holder.presatt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pre1 = Integer.parseInt((String) holder.pres.getText());
+
+                int total1 = Integer.parseInt((String) holder.tot.getText());
+                pre1++;
+                total1++;
+                holder.pres.setText(pre1+"");
+                holder.tot.setText(total1+"");
+                onClickListnerPlusMinus.onClickedPlus(i,sub,pre1);
+
+            }
+        });
+        holder.absatt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int total1 = Integer.parseInt((String) holder.tot.getText());
+                int ab = Integer.parseInt(itemList.get(i).getAbs());
+                total1++;
+                ab++;
+                holder.tot.setText(total1+"");
+                onClickListnerPlusMinus.onClickedMinus(i,sub,ab);
+
+            }
+        });
     }
 
     @Override
@@ -72,57 +102,24 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
     }
 
 
-    private  OnItemClickListener mListener;
-    public interface OnItemClickListener{
 
-        void onPreClick(int position);
-        void onAbsClick(int position);
 
-    }
-    public void setOnItemClickListener(OnItemClickListener listener)
-    {
-        mListener = listener;
-    }
+
 
     public class listViewHolder extends RecyclerView.ViewHolder{
         TextView id,sub,mini,pres,tot;
         RelativeLayout parentLayout;
 Button presatt,absatt;
-        public listViewHolder(@NonNull View itemView,final OnItemClickListener listener) {
+        public listViewHolder(@NonNull View itemView) {
             super(itemView);
             sub = (TextView) itemView.findViewById(R.id.subject);
             mini = (TextView) itemView.findViewById(R.id.minAtten);
             pres = (TextView) itemView.findViewById(R.id.pres);
             tot = (TextView) itemView.findViewById(R.id.total);
             parentLayout=(RelativeLayout)itemView.findViewById(R.id.parent);
-            id=(TextView) itemView.findViewById(R.id.id);
             presatt = (Button)itemView.findViewById(R.id.presAtt);
-            presatt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(listener != null){
-                        int position = getAdapterPosition();
-                        if(position != RecyclerView.NO_POSITION);{
-                            listener.onPreClick(position);
-                        }
-                       notifyDataSetChanged();
-                    }
-                }
-            });
             absatt = (Button)itemView.findViewById(R.id.absAtt);
-            absatt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(listener != null){
-                        int position = getAdapterPosition();
-                        if(position != RecyclerView.NO_POSITION);{
-                            listener.onAbsClick(position);
-                        }
-                        notifyDataSetChanged();
 
-                    }
-                }
-            });
 
 
 
