@@ -1,6 +1,7 @@
 package com.example.tidu.attendancemanager2;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -35,12 +36,26 @@ public class EditData extends AppCompatActivity {
         P=receivintent.getStringExtra("P");
         A=receivintent.getStringExtra("A");
         ID=receivintent.getStringExtra("ID");
+        Cursor res =mDb.getAllData();
+        while(res.moveToNext()) {
+            int id = res.getInt(0);
+            if(id == Integer.parseInt(ID));
+            {
+                String name = res.getString(1);
+                String min = res.getString(2);
+                String pres = res.getString(3);
+                String abs = res.getString(4);
+                String tot = String.valueOf(Integer.parseInt(pres) + Integer.parseInt(abs));
+                E1.setText(name);
+                E2.setText(min);
+                E3.setText(pres);
+                E4.setText(abs);
+                break;
+            }
+        }
 
 
-        E1.setText(N);
-        E2.setText(M);
-        E3.setText(P);
-        E4.setText(A);
+
         btnS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,8 +68,9 @@ public class EditData extends AppCompatActivity {
                 if(!item2.equals("") && !item1.equals("") && !item3.equals("") && !item4.equals("")) {
                     mDb.updateData(ID,item1,item2,item3,item4);
                     Toast.makeText(EditData.this,"Data saved.",Toast.LENGTH_SHORT).show();
+                    Intent main1 = new Intent(EditData.this,MainActivity.class);
+                    startActivity(main1);
 
-                    finish();
                 }
                 else{
                     Toast.makeText(EditData.this, "Field cannot be left empty.", Toast.LENGTH_SHORT).show();

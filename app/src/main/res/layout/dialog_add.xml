@@ -28,9 +28,10 @@
         android:layout_alignLeft="@+id/subjectAdd"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
-        android:hint="Minimum Attendence"/>
+        android:hint="Minimum Attendence"
+        />
 
     <Button
         android:id="@+id/AddBtn"

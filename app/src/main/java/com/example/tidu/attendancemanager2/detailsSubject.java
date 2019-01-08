@@ -1,6 +1,7 @@
 package com.example.tidu.attendancemanager2;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +12,28 @@ import android.widget.TextView;
 import static com.example.tidu.attendancemanager2.R.layout.subject_details;
 
 public class detailsSubject extends AppCompatActivity{
+    DatabaseHelper mydb;
     String SName,SMin,SPres,SAbs,SID,STot;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(subject_details);
         getIncomingIntent();
+        mydb = new DatabaseHelper(this);
+        Cursor res =mydb.getAllData();
+        while(res.moveToNext()) {
+            int id = res.getInt(0);
+            if(id == Integer.parseInt(SID));
+            {
+                String name = res.getString(1);
+                String min = res.getString(2);
+                String pres = res.getString(3);
+                String abs = res.getString(4);
+                String tot = String.valueOf(Integer.parseInt(pres) + Integer.parseInt(abs));
+                SetText(name, min, pres, abs, tot, SID);
+                break;
+            }
+        }
         Button E =  (Button) findViewById(R.id.edit);
         E.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +57,7 @@ public class detailsSubject extends AppCompatActivity{
             STot= getIntent().getStringExtra("ITot");
             SID=getIntent().getStringExtra("Id");
             SAbs= String.valueOf(Integer.parseInt(STot) - Integer.parseInt(SPres));
-            SetText(SName,SMin,SPres,SAbs,STot,SID);
+
         }
     }
     private void SetText(String SName, String SMin, String SPres, String SAbs, String STot,String SID) {
