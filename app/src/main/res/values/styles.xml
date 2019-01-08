@@ -4,8 +4,25 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#4A6572</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">#F9AA33</item>
+    </style>
+    <style name="HeaderBar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:background">#344955</item>
+        <item name="android:titleTextColor">#F9AA33</item>
+
+
+
+
+    </style>
+    <style name="plus" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">#F9AA33</item>
+        <item name="colorControlHighlight">#ffffff</item>
+    </style>
+    <style name="minus" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">#F9AA33</item>
+        <item name="colorControlHighlight">#ffffff</item>
     </style>
 
 </resources>

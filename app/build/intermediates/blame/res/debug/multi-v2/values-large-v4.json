@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\info\\Desktop\\fd\\attendance-manager-app-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\info\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9322bc1dfc068107d9c8c503a5ea6843\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\info\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\54b522a2bcb0fcda0891d9b7b90cf641\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

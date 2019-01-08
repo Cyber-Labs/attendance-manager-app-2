@@ -1,137 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/parent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:id="@+id/parent">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="160dp"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/subject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="22dp"
-        android:text="TextView"
-        android:textSize="20dp"
-        android:textColor="#243037"/>
-</LinearLayout>
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/matCardView"
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="64dp"
-        android:text="Minimum Attendence"
-        android:textSize="16sp" />
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="376dp"
 
-    <TextView
-        android:id="@+id/minAtten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_toRightOf="@+id/textView4"
-        android:text="TextView"
-        android:textSize="16sp" />
+        android:layout_height="150dp"
+        app:cardBackgroundColor="#344955"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="43dp"
-        android:text="Attendance"
-        android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/pres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginLeft="147dp"
-        android:text="78"
-        android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:visibility="invisible" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginBottom="-7dp"
-        android:layout_toEndOf="@+id/pres"
-        android:layout_toRightOf="@+id/pres"
-        android:gravity="center_vertical"
-        android:text="/"
-        android:textSize="25dp" />
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#F9AA33"
+                android:text="TextView"
+                android:textStyle="bold"
 
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView6"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/textView11"
-        android:layout_toRightOf="@+id/textView11"
-        android:text="60"
-        android:textSize="16sp" />
+                android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/presAtt"
-        android:layout_width="51dp"
-        android:layout_height="37dp"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginRight="101dp"
-        android:layout_marginBottom="12dp"
-        android:layout_toEndOf="@+id/total"
-        android:layout_toRightOf="@+id/total"
-        android:text="+" />
 
-    <Button
-        android:id="@+id/absAtt"
-        android:layout_width="51dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/textView11"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="-15dp"
-        android:layout_toEndOf="@+id/textView11"
-        android:layout_toRightOf="@+id/textView11"
-        android:text="-" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subject"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Minimum Attendence"
+                android:textColor="#F9AA33"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:text="Attendance"
+                android:textStyle="bold"
+                android:textColor="#F9AA33"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/minAtten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subject"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/textView4"
+                android:text="75"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/subject"
+                android:textSize="25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#F9AA33"
+                android:layout_toRightOf="@+id/minAtten"
+                />
+
+            <TextView
+                android:id="@+id/pres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/textView6"
+                android:text="78"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/pres"
+                android:text="/"
+                android:textColor="#F9AA33"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView11"
+                android:textColor="#ffffff"
+
+                android:text="99"
+                android:textSize="30dp" />
+
+            <ImageButton
+                android:id="@+id/presAtt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/ic_check_black_24dp"
+                android:theme="@style/plus"
+
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/absAtt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/presAtt"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_close_black_24dp"
+                android:elevation="40dp"
+                android:theme="@style/minus"
+
+                />
+
+        </RelativeLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </RelativeLayout>

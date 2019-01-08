@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -109,7 +110,7 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
     public class listViewHolder extends RecyclerView.ViewHolder{
         TextView id,sub,mini,pres,tot;
         RelativeLayout parentLayout;
-Button presatt,absatt;
+ImageButton presatt,absatt;
         public listViewHolder(@NonNull View itemView) {
             super(itemView);
             sub = (TextView) itemView.findViewById(R.id.subject);
@@ -117,8 +118,8 @@ Button presatt,absatt;
             pres = (TextView) itemView.findViewById(R.id.pres);
             tot = (TextView) itemView.findViewById(R.id.total);
             parentLayout=(RelativeLayout)itemView.findViewById(R.id.parent);
-            presatt = (Button)itemView.findViewById(R.id.presAtt);
-            absatt = (Button)itemView.findViewById(R.id.absAtt);
+            presatt = (ImageButton)itemView.findViewById(R.id.presAtt);
+            absatt = (ImageButton)itemView.findViewById(R.id.absAtt);
 
 
 

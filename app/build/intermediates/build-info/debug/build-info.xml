@@ -1,129 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="28"
+    abi="armeabi-v7a,armeabi"
+    api-level="26"
     build-mode="FULL"
-    density="560dpi"
+    density="xhdpi"
     format="10"
     plugin-version="3.2.1"
-<<<<<<< HEAD
-    timestamp="1546793684905"
-=======
-    timestamp="1546930058293"
->>>>>>> new
-    token="-9129173231499566656"
+    timestamp="1546968457503"
+    token="-5897301322005663587"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-<<<<<<< HEAD
-        duration="0" />
-=======
-        duration="1474" />
->>>>>>> new
+        duration="435" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-<<<<<<< HEAD
-        duration="0" />
+        duration="138" />
     <task
         name="verifier"
-        duration="0" />
-=======
-        duration="77" />
-    <task
-        name="verifier"
-        duration="12" />
->>>>>>> new
+        duration="120" />
 
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-<<<<<<< HEAD
-        timestamp="1546793684905"
-=======
-        timestamp="1546930058293"
->>>>>>> new
+        timestamp="1546968457503"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\info\Desktop\fd\attendance-manager-app-2\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 
