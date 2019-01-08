@@ -5515,35 +5515,37 @@ public final class R {
     public static final int design_snackbar_background=0x7f070064;
     public static final int fab_add=0x7f070065;
     public static final int ic_add_black_24dp=0x7f070066;
-    public static final int ic_check_black_24dp=0x7f070067;
-    public static final int ic_close_black_24dp=0x7f070068;
-    public static final int ic_delete_black_24dp=0x7f070069;
-    public static final int ic_launcher_background=0x7f07006a;
-    public static final int ic_launcher_foreground=0x7f07006b;
-    public static final int ic_library_add_black_24dp=0x7f07006c;
-    public static final int ic_more_vert=0x7f07006d;
-    public static final int ic_mtrl_chip_checked_black=0x7f07006e;
-    public static final int ic_mtrl_chip_checked_circle=0x7f07006f;
-    public static final int ic_mtrl_chip_close_circle=0x7f070070;
-    public static final int logo=0x7f070071;
-    public static final int mtrl_snackbar_background=0x7f070072;
-    public static final int mtrl_tabs_default_indicator=0x7f070073;
-    public static final int navigation_empty_icon=0x7f070074;
-    public static final int notification_action_background=0x7f070075;
-    public static final int notification_bg=0x7f070076;
-    public static final int notification_bg_low=0x7f070077;
-    public static final int notification_bg_low_normal=0x7f070078;
-    public static final int notification_bg_low_pressed=0x7f070079;
-    public static final int notification_bg_normal=0x7f07007a;
-    public static final int notification_bg_normal_pressed=0x7f07007b;
-    public static final int notification_icon_background=0x7f07007c;
-    public static final int notification_template_icon_bg=0x7f07007d;
-    public static final int notification_template_icon_low_bg=0x7f07007e;
-    public static final int notification_tile_bg=0x7f07007f;
-    public static final int notify_panel_notification_icon_bg=0x7f070080;
-    public static final int student=0x7f070081;
-    public static final int tooltip_frame_dark=0x7f070082;
-    public static final int tooltip_frame_light=0x7f070083;
+    public static final int ic_book_black_24dp=0x7f070067;
+    public static final int ic_check_black_24dp=0x7f070068;
+    public static final int ic_close_black_24dp=0x7f070069;
+    public static final int ic_delete_black_24dp=0x7f07006a;
+    public static final int ic_delete_forever_black_24dp=0x7f07006b;
+    public static final int ic_launcher_background=0x7f07006c;
+    public static final int ic_launcher_foreground=0x7f07006d;
+    public static final int ic_library_add_black_24dp=0x7f07006e;
+    public static final int ic_more_vert=0x7f07006f;
+    public static final int ic_mtrl_chip_checked_black=0x7f070070;
+    public static final int ic_mtrl_chip_checked_circle=0x7f070071;
+    public static final int ic_mtrl_chip_close_circle=0x7f070072;
+    public static final int logo=0x7f070073;
+    public static final int mtrl_snackbar_background=0x7f070074;
+    public static final int mtrl_tabs_default_indicator=0x7f070075;
+    public static final int navigation_empty_icon=0x7f070076;
+    public static final int notification_action_background=0x7f070077;
+    public static final int notification_bg=0x7f070078;
+    public static final int notification_bg_low=0x7f070079;
+    public static final int notification_bg_low_normal=0x7f07007a;
+    public static final int notification_bg_low_pressed=0x7f07007b;
+    public static final int notification_bg_normal=0x7f07007c;
+    public static final int notification_bg_normal_pressed=0x7f07007d;
+    public static final int notification_icon_background=0x7f07007e;
+    public static final int notification_template_icon_bg=0x7f07007f;
+    public static final int notification_template_icon_low_bg=0x7f070080;
+    public static final int notification_tile_bg=0x7f070081;
+    public static final int notify_panel_notification_icon_bg=0x7f070082;
+    public static final int student=0x7f070083;
+    public static final int tooltip_frame_dark=0x7f070084;
+    public static final int tooltip_frame_light=0x7f070085;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -5890,6 +5892,7 @@ public final class R {
   public static final class mipmap {
     public static final int ic_launcher=0x7f0d0000;
     public static final int ic_launcher_round=0x7f0d0001;
+    public static final int pencil=0x7f0d0002;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0e0000;

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F9AA33">
 
     <EditText
         android:id="@+id/deleteSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginLeft="66dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
+
         android:inputType="textPersonName"
         android:text=""
-        android:hint="Subject"/>
+        android:hint="Subject"
+        android:textColor="#ffffff"
+
+        android:textColorHint="#344955"/>
 
     <Button
         android:id="@+id/Deletebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/deleteSubject"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="#344955"
+        android:textColor="#F9AA33"
+        android:layout_marginTop="40dp"
         android:text="Delete" />
 
     <Button
@@ -35,13 +35,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/deleteSubject"
-        android:layout_alignBottom="@+id/Deletebtn"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginRight="91dp"
-        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/Deletebtn"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#344955"
+        android:textColor="#F9AA33"
+      android:layout_marginLeft="40dp"
+        android:layout_marginRight="50dp"
         android:text="Cancel" />
 
 </RelativeLayout>

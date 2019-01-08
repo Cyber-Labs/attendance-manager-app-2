@@ -1,4 +1,4 @@
-#Tue Jan 08 22:57:42 IST 2019
+#Wed Jan 09 00:25:46 IST 2019
 base.0=/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/transforms/dexMerger/debug/6
 path.0=classes.dex
 renamed.0=classes.dex

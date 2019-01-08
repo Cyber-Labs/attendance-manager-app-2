@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+
     android:id="@+id/drawer_layout">
 
     <LinearLayout
@@ -84,7 +85,7 @@
                     android:id="@+id/delete_subject"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_delete_black_24dp"
+                    android:src="@drawable/ic_delete_forever_black_24dp"
                     fab:fab_label="DELETE"
 
                     fab:fab_size="mini" />
@@ -100,6 +101,8 @@
         app:menu="@menu/drawer_view"
         app:headerLayout="@layout/nav_headder"
         android:fitsSystemWindows="true"
+        android:background="#344955"
+        app:itemTextColor="#F9AA33"
         />
 
 

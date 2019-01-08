@@ -164,6 +164,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/interpolator-v21/mtrl_fast_out_slow_in.xml"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_book_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -352,6 +356,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/animator/mtrl_fab_show_motion_spec.xml"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_delete_forever_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/drawable-anydpi-v21/design_ic_visibility.xml"
     },
@@ -452,20 +460,20 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_delete_black_24dp.png.flat",
-        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_delete_black_24dp.png"
-    },
-    {
-        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
-        "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/anim_abc_popup_exit.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
+        "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_delete_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_delete_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -680,6 +688,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-mdpi/ic_delete_forever_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
@@ -734,6 +746,10 @@
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-ldpi/ic_book_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -948,6 +964,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-ldpi/ic_delete_forever_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -962,6 +982,10 @@
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable_books.png.flat",
         "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/src/main/res/drawable/books.png"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-hdpi/ic_delete_forever_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
@@ -982,6 +1006,10 @@
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/anim_fab_scale_down.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/7fd4aa70db5790df7e3f3f00a91bbf5a/res/anim/fab_scale_down.xml"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_delete_forever_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
@@ -1212,6 +1240,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/eba7f809179c233aca1810b56d09a48f/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_delete_forever_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_delete_forever_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable/abc_ic_clear_material.xml"
     },
@@ -1400,6 +1432,10 @@
         "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-hdpi/ic_more_vert.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_delete_forever_black_24dp.xml.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_delete_forever_black_24dp.xml"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/color-v23_design_tint_password_toggle.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/color-v23/design_tint_password_toggle.xml"
     },
@@ -1482,6 +1518,10 @@
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable_abc_list_divider_material.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable/abc_list_divider_material.xml"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-hdpi/ic_book_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_slow_in.xml.flat",
@@ -1644,6 +1684,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/layout/design_navigation_menu_item.xml"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_book_black_24dp.xml.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_book_black_24dp.xml"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
     },
@@ -1752,6 +1796,10 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_book_black_24dp.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/d5705e66f444d52b3c89426bfe85e56f/res/color/mtrl_tabs_icon_color_selector.xml"
     },
@@ -1790,6 +1838,10 @@
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-mdpi/ic_book_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/layout_abc_action_bar_title_item.xml.flat",
@@ -2200,12 +2252,20 @@
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_pencil.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/src/main/res/mipmap-xxxhdpi/pencil.png"
+    },
+    {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_header_item_layout.xml.flat",
         "source": "/Users/udit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/830b13dcc8fe9985edf46095133255b3/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_book_black_24dp.png.flat",
+        "source": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_book_black_24dp.png"
     },
     {
         "merged": "/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/res/merged/debug/color_mtrl_chip_close_icon_tint.xml.flat",

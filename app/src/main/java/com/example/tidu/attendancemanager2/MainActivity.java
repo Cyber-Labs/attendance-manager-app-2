@@ -246,7 +246,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {                      //intructions to be performed if add button is clicked
                         String subject = sub.getText().toString();//stores the value of subject typed
                         String minimum = min.getText().toString();//stores the minimum attendence
-                        boolean isinserted=myDb.insertData(subject,minimum,"0","0","0");//inserts data
+                        if((subject.trim().length()!=0)&&(minimum.trim().length()!=0))
+                        {boolean isinserted=myDb.insertData(subject,minimum,"0","0","0");//inserts data
                         if(isinserted)
                             Toast.makeText(MainActivity.this,"Data added",Toast.LENGTH_SHORT).show();
                         else
@@ -274,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
                         });
                         subList.setAdapter(mlistAd);
 
-                        add_dialog.dismiss();
+                        add_dialog.dismiss();}
                     }
                 });
 
