@@ -1,5 +1,9 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Sun Jan 06 22:23:47 IST 2019
+=======
+#Mon Jan 07 22:24:19 IST 2019
+>>>>>>> new
 4.path=classes.dex
 8.set=DEX
 6.path=classes.dex
