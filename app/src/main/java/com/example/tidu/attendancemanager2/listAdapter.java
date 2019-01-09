@@ -47,6 +47,14 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
         holder.tot.setText(total);
         final String sub = (String) holder.sub.getText();
         final int a =ab++;
+        if(tot1!=0) {
+            double cu = (Math.round(((1.0 * pre) / tot1) * 10000)) / 100;
+            holder.current.setText(cu + "");
+        }
+        else
+        {
+            holder.current.setText("N/A");
+        }
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +81,14 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
                 total1++;
                 holder.pres.setText(pre1+"");
                 holder.tot.setText(total1+"");
+                if(total1!=0) {
+                    double cu = (Math.round(((1.0 * pre1) / total1) * 10000)) / 100;
+                    holder.current.setText(cu + "");
+                }
+                else
+                {
+                    holder.current.setText("N/A");
+                }
                 onClickListnerPlusMinus.onClickedPlus(i,sub,pre1);
 
             }
@@ -82,9 +98,18 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
             public void onClick(View v) {
                 int total1 = Integer.parseInt((String) holder.tot.getText());
                 int ab = Integer.parseInt(itemList.get(i).getAbs());
+                int pre1 = Integer.parseInt((String) holder.pres.getText());
                 total1++;
                 ab++;
                 holder.tot.setText(total1+"");
+                if(total1!=0) {
+                    double cu = (Math.round(((1.0 * pre1) / total1) * 10000)) / 100;
+                    holder.current.setText(cu + "");
+                }
+                else
+                {
+                    holder.current.setText("N/A");
+                }
                 onClickListnerPlusMinus.onClickedMinus(i,sub,ab);
 
             }
@@ -108,7 +133,7 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
 
 
     public class listViewHolder extends RecyclerView.ViewHolder{
-        TextView id,sub,mini,pres,tot;
+        TextView id,sub,mini,pres,tot,current;
         RelativeLayout parentLayout;
 ImageButton presatt,absatt;
         public listViewHolder(@NonNull View itemView) {
@@ -120,6 +145,7 @@ ImageButton presatt,absatt;
             parentLayout=(RelativeLayout)itemView.findViewById(R.id.parent);
             presatt = (ImageButton)itemView.findViewById(R.id.presAtt);
             absatt = (ImageButton)itemView.findViewById(R.id.absAtt);
+            current = (TextView)itemView.findViewById(R.id.Current);
 
 
 
