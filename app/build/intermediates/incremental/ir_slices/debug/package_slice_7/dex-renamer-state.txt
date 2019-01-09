@@ -1,8 +1,1 @@
-<<<<<<< HEAD
-#Sun Jan 06 22:23:47 IST 2019
-=======
-#Mon Jan 07 22:24:19 IST 2019
->>>>>>> new
-base.0=C\:\\Users\\info\\Desktop\\fd\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
-path.0=classes.dex
-renamed.0=classes.dex
+#Wed Jan 09 00:25:46 IST 2019

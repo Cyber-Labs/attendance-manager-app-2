@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/nav_headder"
     android:layout_width="match_parent"
-    android:layout_height="180dp">
+    android:layout_height="200dp"
+    >
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/student"
+        android:src="@mipmap/pencil"
         />
 
 </RelativeLayout>

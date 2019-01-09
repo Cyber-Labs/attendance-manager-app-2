@@ -15,6 +15,14 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fab_scale_down
+anim fab_scale_up
+anim fab_slide_in_from_left
+anim fab_slide_in_from_right
+anim fab_slide_out_to_left
+anim fab_slide_out_to_right
+anim hide_to_bottom
+anim show_from_bottom
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -233,6 +241,26 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr fab_colorDisabled
+attr fab_colorNormal
+attr fab_colorPressed
+attr fab_colorRipple
+attr fab_elevationCompat
+attr fab_hideAnimation
+attr fab_label
+attr fab_progress
+attr fab_progress_backgroundColor
+attr fab_progress_color
+attr fab_progress_indeterminate
+attr fab_progress_max
+attr fab_progress_showBackground
+attr fab_shadowColor
+attr fab_shadowRadius
+attr fab_shadowXOffset
+attr fab_shadowYOffset
+attr fab_showAnimation
+attr fab_showShadow
+attr fab_size
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -382,6 +410,45 @@ attr maxButtonHeight
 attr maxImageSize
 attr measureWithLargestChild
 attr menu
+attr menu_animationDelayPerItem
+attr menu_backgroundColor
+attr menu_buttonSpacing
+attr menu_buttonToggleAnimation
+attr menu_colorNormal
+attr menu_colorPressed
+attr menu_colorRipple
+attr menu_fab_hide_animation
+attr menu_fab_label
+attr menu_fab_show_animation
+attr menu_fab_size
+attr menu_icon
+attr menu_labels_colorNormal
+attr menu_labels_colorPressed
+attr menu_labels_colorRipple
+attr menu_labels_cornerRadius
+attr menu_labels_customFont
+attr menu_labels_ellipsize
+attr menu_labels_hideAnimation
+attr menu_labels_margin
+attr menu_labels_maxLines
+attr menu_labels_padding
+attr menu_labels_paddingBottom
+attr menu_labels_paddingLeft
+attr menu_labels_paddingRight
+attr menu_labels_paddingTop
+attr menu_labels_position
+attr menu_labels_showAnimation
+attr menu_labels_showShadow
+attr menu_labels_singleLine
+attr menu_labels_style
+attr menu_labels_textColor
+attr menu_labels_textSize
+attr menu_openDirection
+attr menu_shadowColor
+attr menu_shadowRadius
+attr menu_shadowXOffset
+attr menu_shadowYOffset
+attr menu_showShadow
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
@@ -824,6 +891,8 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_size_mini
+dimen fab_size_normal
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -837,6 +906,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen labels_text_size
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -1002,11 +1072,21 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fab_add
+drawable ic_add_black_24dp
+drawable ic_book_black_24dp
+drawable ic_check_black_24dp
+drawable ic_close_black_24dp
+drawable ic_delete_black_24dp
+drawable ic_delete_forever_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_library_add_black_24dp
+drawable ic_more_vert
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable logo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1063,6 +1143,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_subject
 id alertTitle
 id all
 id always
@@ -1092,6 +1173,7 @@ id customPanel
 id decor_content_parent
 id default_activity_button
 id deleteSubject
+id delete_subject
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1100,6 +1182,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id down
 id drawer_layout
 id edit
 id edit_query
@@ -1109,6 +1192,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_label
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1123,6 +1207,7 @@ id home
 id homeAsUp
 id icon
 id icon_group
+id id
 id id1
 id ifRoom
 id image
@@ -1137,7 +1222,10 @@ id line1
 id line3
 id listMode
 id list_item
+id marquee
 id masked
+id matCardView
+id menu
 id message
 id middle
 id min
@@ -1314,6 +1402,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_splash_screen
 layout data_edit
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1348,8 +1437,11 @@ layout select_dialog_singlechoice_material
 layout subject_details
 layout support_simple_spinner_dropdown_item
 menu drawer_view
+mipmap boooks
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap pencil
+mipmap splasimage
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1605,6 +1697,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style HeaderBar
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -1903,6 +1996,8 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
+style minus
+style plus
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -1939,8 +2034,9 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
-styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
+styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize fab_colorDisabled fab_colorNormal fab_colorPressed fab_colorRipple fab_elevationCompat fab_hideAnimation fab_label fab_progress fab_progress_backgroundColor fab_progress_color fab_progress_indeterminate fab_progress_max fab_progress_showBackground fab_shadowColor fab_shadowRadius fab_shadowXOffset fab_shadowYOffset fab_showAnimation fab_showShadow fab_size hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
+styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_customFont menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex

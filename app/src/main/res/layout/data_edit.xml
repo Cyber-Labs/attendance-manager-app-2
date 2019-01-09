@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#F9AA33">
     <TextView
         android:id="@+id/subj1"
         android:layout_width="wrap_content"
@@ -11,6 +12,8 @@
         android:padding="8dp"
         android:textSize="20sp"
         android:textColor="#243037"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="Subject" />
     <EditText
         android:id="@+id/sub1"
@@ -18,7 +21,11 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:inputType="textPersonName"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+
+        android:textColorHint="#344955"
         android:ems="10" />
 
     <TextView
@@ -27,47 +34,60 @@
         android:layout_height="wrap_content"
         android:text="Minimum Attendance"
         android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="#243037"/>
     <EditText
         android:id="@+id/min1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:inputType="number"
+        android:textColor="#ffffff"
+
+        android:textColorHint="#344955"
         android:ems="10"/>
     <TextView
         android:id="@+id/pre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Present"
-        android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:textColor="#243037"
         android:textSize="20sp"/>
     <EditText
         android:id="@+id/pres1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:textColor="#ffffff"
+
+        android:textColorHint="#344955"
         android:inputType="number"/>
     <TextView
         android:id="@+id/a1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Absent"
-        android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="#243037"/>
     <EditText
         android:id="@+id/ab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:textColor="#ffffff"
+
+        android:textColorHint="#344955"
         android:inputType="number"/>
 
 
@@ -79,16 +99,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SAVE"
-        android:layout_marginLeft="100dp"
+       android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
+
         android:id="@+id/save"
+        android:backgroundTint="#344955"
+        android:textColor="#F9AA33"
         android:textSize="20sp"/>
         <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:layout_marginLeft="25dp"
+         android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
         android:text="CANCEL"
+            android:backgroundTint="#344955"
+            android:textColor="#F9AA33"
         android:id="@+id/cancel"
         android:textSize="20sp"/>
     </LinearLayout>

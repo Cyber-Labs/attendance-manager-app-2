@@ -4,14 +4,15 @@
     <item
         android:id="@+id/add"
         android:title="Add Subject"
-        android:icon="@drawable/books"
+        android:icon="@drawable/ic_book_black_24dp"
+
 
         />
 
     <item
         android:id="@+id/Delete"
         android:title="Delete Subject"
-        android:icon="@drawable/bin"/>
+        android:icon="@drawable/ic_delete_black_24dp"/>
 
 
 </group>
