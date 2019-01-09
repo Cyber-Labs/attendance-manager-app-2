@@ -1437,9 +1437,11 @@ layout select_dialog_singlechoice_material
 layout subject_details
 layout support_simple_spinner_dropdown_item
 menu drawer_view
+mipmap boooks
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap pencil
+mipmap splasimage
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
