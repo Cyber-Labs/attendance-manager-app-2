@@ -14,16 +14,19 @@
         android:layout_width="376dp"
 
         android:layout_height="150dp"
-        app:cardBackgroundColor="#344955"
         android:layout_marginLeft="@dimen/mtrl_card_spacing"
         android:layout_marginTop="@dimen/mtrl_card_spacing"
         android:layout_marginRight="@dimen/mtrl_card_spacing"
+        app:cardBackgroundColor="#344955"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/matCardView"
+            android:layout_alignTop="@+id/matCardView">
+
 
             <TextView
                 android:id="@+id/id"
@@ -38,11 +41,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="#F9AA33"
                 android:text="TextView"
-                android:textStyle="bold"
+                android:textColor="#F9AA33"
+                android:textSize="20dp"
 
-                android:textSize="20dp" />
+                android:textStyle="bold" />
 
 
             <TextView
@@ -54,8 +57,8 @@
                 android:layout_marginTop="10dp"
                 android:text="Minimum Attendence"
                 android:textColor="#F9AA33"
-                android:textStyle="bold"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -65,9 +68,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="18dp"
                 android:text="Attendance"
-                android:textStyle="bold"
                 android:textColor="#F9AA33"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/minAtten"
@@ -79,18 +82,18 @@
                 android:layout_toRightOf="@+id/textView4"
                 android:text="75"
                 android:textColor="#ffffff"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="%"
-                android:layout_marginTop="5dp"
                 android:layout_below="@id/subject"
-                android:textSize="25sp"
                 android:layout_marginLeft="5dp"
-                android:textColor="#F9AA33"
+                android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/minAtten"
-                />
+                android:text="%"
+                android:textColor="#F9AA33"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/pres"
@@ -123,39 +126,74 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/textView11"
-                android:textColor="#ffffff"
-
                 android:text="99"
+
+                android:textColor="#ffffff"
                 android:textSize="30dp" />
 
             <ImageButton
                 android:id="@+id/presAtt"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+
+
+                android:layout_toStartOf="@+id/absAtt"
+                android:layout_toLeftOf="@+id/absAtt"
                 android:src="@drawable/ic_check_black_24dp"
-                android:theme="@style/plus"
-
-
-                />
+                android:theme="@style/plus" />
 
 
             <ImageButton
                 android:id="@+id/absAtt"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_below="@id/presAtt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="11dp"
+
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_close_black_24dp"
                 android:elevation="40dp"
-                android:theme="@style/minus"
+                android:src="@drawable/ic_close_black_24dp"
+                android:theme="@style/minus" />
 
-                />
+            <TextView
+                android:id="@+id/Current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/presAtt"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="47dp"
+                android:layout_marginRight="47dp"
+                android:layout_marginBottom="28dp"
+                android:text="75"
+                android:textColor="#ffffff"
+                android:textSize="27dp" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/absAtt"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="-10dp"
+                android:text="%"
+                android:textColor="#F9AA33"
+                android:textSize="27dp" />
         </RelativeLayout>
 
     </android.support.design.card.MaterialCardView>

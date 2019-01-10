@@ -111,37 +111,41 @@ public class MainActivity extends AppCompatActivity {
                             add_Btn.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {                      //intructions to be performed if add button is clicked
-                                    String subject = sub.getText().toString();//stores the value of subject typed
-                                    String minimum = min.getText().toString();//stores the minimum attendence
-                                    boolean isinserted=myDb.insertData(subject,minimum,"0","0","0");//inserts data
-                                    if(isinserted)
-                                        Toast.makeText(MainActivity.this,"Data added",Toast.LENGTH_SHORT).show();
+                                    String subject = sub.getText().toString().trim();//stores the value of subject typed
+                                    String minimum = min.getText().toString().trim();//stores the minimum attendence
+                                    if (subject.isEmpty() || minimum.isEmpty()) {
+                                        Toast.makeText(MainActivity.this, "Subject Not added. Fill all the fields", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else {
+                                    boolean isinserted = myDb.insertData(subject, minimum, "0", "0", "0");//inserts data
+                                    if (isinserted)
+                                        Toast.makeText(MainActivity.this, "Data added", Toast.LENGTH_SHORT).show();
                                     else
-                                        Toast.makeText(MainActivity.this,"Some Error Occured",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(MainActivity.this, "Some Error Occured", Toast.LENGTH_SHORT).show();
 
                                     itemList = new ArrayList<>();
                                     Cursor res = myDb.getAllData();
-                                    while(res.moveToNext())
-                                    {
-                                        itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                                res.getString(3),res.getString(4),res.getString(5)));
+                                    while (res.moveToNext()) {
+                                        itemList.add(new SubjectInfo(res.getInt(0), res.getString(1), res.getString(2),
+                                                res.getString(3), res.getString(4), res.getString(5)));
                                     }
                                     mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
                                         @Override
                                         public void onClickedMinus(int position, String sub, int a) {
                                             String ab = Integer.toString(a);
-                                            myDb.updateabs(sub,ab);
+                                            myDb.updateabs(sub, ab);
                                         }
 
                                         @Override
-                                        public void onClickedPlus(int position,String sub, int p) {
+                                        public void onClickedPlus(int position, String sub, int p) {
                                             String pr = Integer.toString(p);
-                                            myDb.updatepres(sub,pr);
+                                            myDb.updatepres(sub, pr);
                                         }
                                     });
                                     subList.setAdapter(mlistAd);
 
                                     add_dialog.dismiss();
+                                }
                                 }
                             });
 
@@ -173,37 +177,41 @@ public class MainActivity extends AppCompatActivity {
                             delete_Btn.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {   ////intruction to be performed if delete button is clicked
-                                    String subject = deleteSub.getText().toString();  //stores the value of subject enter for deletion
+                                    String subject = deleteSub.getText().toString().trim();  //stores the value of subject enter for deletion
+                                    if (subject.isEmpty()) {
+                                        Toast.makeText(MainActivity.this, "Subject not deleted. Fill the subject", Toast.LENGTH_LONG).show();
+                                    }
+                                    else{
 
                                     Integer deletedRows = myDb.deleteData(subject);
-                                    if(deletedRows > 0)
-                                        Toast.makeText(MainActivity.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                                    if (deletedRows > 0)
+                                        Toast.makeText(MainActivity.this, "Data Deleted", Toast.LENGTH_LONG).show();
                                     else
-                                        Toast.makeText(MainActivity.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "Data not Deleted", Toast.LENGTH_LONG).show();
 
                                     itemList = new ArrayList<>();
                                     Cursor res = myDb.getAllData();
-                                    while(res.moveToNext())
-                                    {
-                                        itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                                res.getString(3),res.getString(4),res.getString(5)));
+                                    while (res.moveToNext()) {
+                                        itemList.add(new SubjectInfo(res.getInt(0), res.getString(1), res.getString(2),
+                                                res.getString(3), res.getString(4), res.getString(5)));
                                     }
                                     mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
                                         @Override
-                                        public void onClickedMinus(int position,String sub, int a) {
+                                        public void onClickedMinus(int position, String sub, int a) {
                                             String ab = Integer.toString(a);
-                                            myDb.updateabs(sub,ab);
+                                            myDb.updateabs(sub, ab);
                                         }
 
                                         @Override
-                                        public void onClickedPlus(int position,String sub, int p) {
+                                        public void onClickedPlus(int position, String sub, int p) {
                                             String pr = Integer.toString(p);
-                                            myDb.updatepres(sub,pr);
+                                            myDb.updatepres(sub, pr);
                                         }
                                     });
                                     subList.setAdapter(mlistAd);
 
                                     add_dialog2.dismiss();
+                                }
 
                                 }
                             });
@@ -244,38 +252,44 @@ public class MainActivity extends AppCompatActivity {
                 add_Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {                      //intructions to be performed if add button is clicked
-                        String subject = sub.getText().toString();//stores the value of subject typed
-                        String minimum = min.getText().toString();//stores the minimum attendence
-                        if((subject.trim().length()!=0)&&(minimum.trim().length()!=0))
-                        {boolean isinserted=myDb.insertData(subject,minimum,"0","0","0");//inserts data
-                        if(isinserted)
-                            Toast.makeText(MainActivity.this,"Data added",Toast.LENGTH_SHORT).show();
-                        else
-                            Toast.makeText(MainActivity.this,"Some Error Occured",Toast.LENGTH_SHORT).show();
-
-                        itemList = new ArrayList<>();
-                        Cursor res = myDb.getAllData();
-                        while(res.moveToNext())
-                        {
-                            itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                    res.getString(3),res.getString(4),res.getString(5)));
+                        String subject = sub.getText().toString().trim();//stores the value of subject typed
+                        String minimum = min.getText().toString().trim();//stores the minimum attendence
+                        if (subject.isEmpty() || minimum.isEmpty()) {
+                            Toast.makeText(MainActivity.this, "Subject Not added. Fill all the fields", Toast.LENGTH_SHORT).show();
                         }
-                        mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
-                            @Override
-                            public void onClickedMinus(int position, String sub, int a) {
-                                String ab = Integer.toString(a);
-                                myDb.updateabs(sub,ab);
-                            }
+                        else
+                        {
+                        if ((subject.trim().length() != 0) && (minimum.trim().length() != 0)) {
+                            boolean isinserted = myDb.insertData(subject, minimum, "0", "0", "0");//inserts data
+                            if (isinserted)
+                                Toast.makeText(MainActivity.this, "Data added", Toast.LENGTH_SHORT).show();
+                            else
+                                Toast.makeText(MainActivity.this, "Some Error Occured", Toast.LENGTH_SHORT).show();
 
-                            @Override
-                            public void onClickedPlus(int position,String sub, int p) {
-                                String pr = Integer.toString(p);
-                                myDb.updatepres(sub,pr);
+                            itemList = new ArrayList<>();
+                            Cursor res = myDb.getAllData();
+                            while (res.moveToNext()) {
+                                itemList.add(new SubjectInfo(res.getInt(0), res.getString(1), res.getString(2),
+                                        res.getString(3), res.getString(4), res.getString(5)));
                             }
-                        });
-                        subList.setAdapter(mlistAd);
+                            mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
+                                @Override
+                                public void onClickedMinus(int position, String sub, int a) {
+                                    String ab = Integer.toString(a);
+                                    myDb.updateabs(sub, ab);
+                                }
 
-                        add_dialog.dismiss();}
+                                @Override
+                                public void onClickedPlus(int position, String sub, int p) {
+                                    String pr = Integer.toString(p);
+                                    myDb.updatepres(sub, pr);
+                                }
+                            });
+                            subList.setAdapter(mlistAd);
+
+                            add_dialog.dismiss();
+                        }
+                    }
                     }
                 });
 
@@ -310,37 +324,40 @@ public class MainActivity extends AppCompatActivity {
                 delete_Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {   ////intruction to be performed if delete button is clicked
-                        String subject = deleteSub.getText().toString();  //stores the value of subject enter for deletion
-
+                        String subject = deleteSub.getText().toString().trim();  //stores the value of subject enter for deletion
+                        if (subject.isEmpty()) {
+                            Toast.makeText(MainActivity.this, "Subject not deleted. Fill the subject", Toast.LENGTH_LONG).show();
+                        }
+                        else {
                         Integer deletedRows = myDb.deleteData(subject);
-                        if(deletedRows > 0)
-                            Toast.makeText(MainActivity.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                        if (deletedRows > 0)
+                            Toast.makeText(MainActivity.this, "Data Deleted", Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(MainActivity.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "Data not Deleted", Toast.LENGTH_LONG).show();
 
                         itemList = new ArrayList<>();
                         Cursor res = myDb.getAllData();
-                        while(res.moveToNext())
-                        {
-                            itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
-                                    res.getString(3),res.getString(4),res.getString(5)));
+                        while (res.moveToNext()) {
+                            itemList.add(new SubjectInfo(res.getInt(0), res.getString(1), res.getString(2),
+                                    res.getString(3), res.getString(4), res.getString(5)));
                         }
                         mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
                             @Override
-                            public void onClickedMinus(int position,String sub, int a) {
+                            public void onClickedMinus(int position, String sub, int a) {
                                 String ab = Integer.toString(a);
-                                myDb.updateabs(sub,ab);
+                                myDb.updateabs(sub, ab);
                             }
 
                             @Override
-                            public void onClickedPlus(int position,String sub, int p) {
+                            public void onClickedPlus(int position, String sub, int p) {
                                 String pr = Integer.toString(p);
-                                myDb.updatepres(sub,pr);
+                                myDb.updatepres(sub, pr);
                             }
                         });
                         subList.setAdapter(mlistAd);
 
                         add_dialog2.dismiss();
+                    }
 
                     }
                 });

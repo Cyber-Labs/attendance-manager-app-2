@@ -1110,6 +1110,7 @@ id AddBtn
 id CTRL
 id CancelBtna
 id Cancelbtnd
+id Current
 id Delete
 id Deletebtn
 id FUNCTION
@@ -1326,6 +1327,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView11
+id textView2
 id textView4
 id textView6
 id text_input_password_toggle

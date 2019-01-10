@@ -1,4 +1,4 @@
-#Wed Jan 09 00:25:45 IST 2019
-base.0=/Users/udit/Desktop/attendance-manager-app-2-theConclusion/app/build/intermediates/transforms/dexMerger/debug/10
+#Thu Jan 10 11:16:18 IST 2019
+base.0=C\:\\Users\\info\\Desktop\\at\\attendance-manager-app-2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex
