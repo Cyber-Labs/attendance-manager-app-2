@@ -19,6 +19,7 @@
         <activity android:name=".detailsSubject" />
         <activity android:name=".EditData"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".contact"></activity>
     </application>
 
 </manifest>

@@ -11,5 +11,15 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/pencil"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:id="@+id/user"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:textSize="35dp"
+        android:layout_marginTop="125dp"/>
 
 </RelativeLayout>

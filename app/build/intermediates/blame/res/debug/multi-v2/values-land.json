@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\info\\Desktop\\at\\attendance-manager-app-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\git\\attendance-manager-app-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\info\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9322bc1dfc068107d9c8c503a5ea6843\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\MEDHA\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\41648f00dfeb49986df759f1db43e363\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\info\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\54b522a2bcb0fcda0891d9b7b90cf641\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\MEDHA\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2e7e62141fe34c04fbacac695d34715e\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

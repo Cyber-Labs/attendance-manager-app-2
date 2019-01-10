@@ -28,6 +28,7 @@
         <activity android:name="com.example.tidu.attendancemanager2.detailsSubject" />
         <activity android:name="com.example.tidu.attendancemanager2.EditData" />
         <activity android:name="com.example.tidu.attendancemanager2.MainActivity" />
+        <activity android:name="com.example.tidu.attendancemanager2.contact" />
     </application>
 
 </manifest>

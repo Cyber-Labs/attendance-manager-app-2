@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\info\\Desktop\\at\\attendance-manager-app-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
+            "outputFile": "C:\\git\\attendance-manager-app-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\info\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\54b522a2bcb0fcda0891d9b7b90cf641\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\MEDHA\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2e7e62141fe34c04fbacac695d34715e\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

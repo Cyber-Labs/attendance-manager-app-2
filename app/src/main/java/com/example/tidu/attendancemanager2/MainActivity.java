@@ -3,6 +3,7 @@ package com.example.tidu.attendancemanager2;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -92,8 +94,104 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         // close drawer when item is tapped
                         DrawerLayout1.closeDrawers();
+                        if(menuItem.getTitle().equals("Delete All")) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
-                        if(menuItem.getTitle().equals("Add Subject"))   //when "Add Subject" item is selected
+                            LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+                            View view = inflater.inflate(R.layout.dialog_delete_all,null);
+                            builder.setView(view);
+                            final AlertDialog delete_all_dialog = builder.create();
+                            delete_all_dialog.show();
+                            Button Yes =  (Button)view.findViewById(R.id.YesBtn);
+                            Button No = (Button)view.findViewById(R.id.NoBtn);
+                            Yes.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    boolean isDeleted=myDb.alldelete();
+                                    if(isDeleted)
+                                        Toast.makeText(MainActivity.this,"Data deleted",Toast.LENGTH_SHORT).show();
+                                    else
+                                        Toast.makeText(MainActivity.this,"Some Error Occured",Toast.LENGTH_SHORT).show();
+                                    itemList = new ArrayList<>();
+                                    Cursor res = myDb.getAllData();
+                                    while(res.moveToNext())
+                                    {
+                                        itemList.add(new SubjectInfo(res.getInt(0),res.getString(1),res.getString(2),
+                                                res.getString(3),res.getString(4),res.getString(5)));
+                                    }
+                                    mlistAd = new listAdapter(MainActivity.this, itemList, new onClickListnerPlusMinus() {
+                                        @Override
+                                        public void onClickedMinus(int position,String sub, int a) {
+                                            String ab = Integer.toString(a);
+                                            myDb.updateabs(sub,ab);
+                                        }
+
+                                        @Override
+                                        public void onClickedPlus(int position,String sub, int p) {
+                                            String pr = Integer.toString(p);
+                                            myDb.updatepres(sub,pr);
+                                        }
+                                    });
+                                    subList.setAdapter(mlistAd);
+
+                                    delete_all_dialog.dismiss();
+                                }
+                            });
+                            No.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    delete_all_dialog.dismiss();
+                                }
+                            });
+                            return true;
+
+                        }
+                        else if(menuItem.getTitle().equals("Edit User Name")){
+                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                            LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+                            View view = inflater.inflate(R.layout.dialog_edit,null);
+                            builder.setView(view);
+                            final AlertDialog edit_dialog = builder.create();
+                            edit_dialog.show();
+                            final Button Save =  (Button)view.findViewById(R.id.S);
+                            Button Cancel = (Button)view.findViewById(R.id.C);
+                            final EditText name = (EditText)view.findViewById(R.id.U);
+                            Save.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String NU = name.getText().toString();
+                                    TextView UName=(TextView)findViewById(R.id.user);
+                                    UName.setText(NU);
+                                    edit_dialog.dismiss();
+
+                                }
+                            });
+                            Cancel.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    edit_dialog.dismiss();
+                                }
+                            });
+                        }
+                        else if(menuItem.getTitle().equals("Report Bug")){
+                            String email="iamme.medha@gmail.com";
+                            String email1="ayush.singh.222k@gmail.com";
+                            String email2="uditdasari19@gmail.com";
+                            Intent intent=new Intent(Intent.ACTION_SENDTO);
+                            intent.setData(Uri.parse("mailto:"+email+","+email1+","+email2));
+                            intent.putExtra(Intent.EXTRA_SUBJECT,"Reporting Bugs");
+                            if(intent.resolveActivity(getPackageManager())!=null){
+                                startActivity(intent);
+
+                            }
+
+                        }
+                        else if (menuItem.getTitle().equals("Contact Us")){
+                            Intent Contact=new Intent(MainActivity.this,contact.class);
+                            startActivity(Contact);
+                        }
+                       /* if(menuItem.getTitle().equals("Add Subject"))   //when "Add Subject" item is selected
                         {
                             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
@@ -224,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
 
-                        }
+                        } */
                         return true;
                     }
                 });

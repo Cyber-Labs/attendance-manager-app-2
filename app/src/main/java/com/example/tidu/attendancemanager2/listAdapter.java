@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,9 +41,24 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
         holder.sub.setText(itemList.get(i).getName());
         holder.mini.setText(itemList.get(i).getMinimum());
         holder.pres.setText(itemList.get(i).getPres());
+        int mi=Integer.parseInt(itemList.get(i).getPres());
          int pre = Integer.parseInt(itemList.get(i).getPres());
         int ab = Integer.parseInt(itemList.get(i).getAbs());
          int tot1 = pre + ab;
+     /*   if(tot1!=0){
+            if (((pre*100)tot1)>=mi){
+                int BackC=ContextCompat.getColor(mContext,R.color.safegreen);
+                holder.current.setTextColor(BackC);
+            }
+            else if(((pre*100)/tot1)<mi)
+            {
+                int BackC = ContextCompat.getColor(mContext, R.color.red);
+                holder.current.setTextColor(BackC);
+            }}
+        else {
+            int BackC = ContextCompat.getColor(mContext, R.color.red);
+            holder.current.setTextColor(BackC);
+        }*/
         final String total = Integer.toString(tot1);
         holder.tot.setText(total);
         final String sub = (String) holder.sub.getText();
@@ -66,6 +82,7 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.listViewHolder
                 intent.putExtra("Ipres", itemList.get(i).getPres());
                 intent.putExtra("ITot",total);
                 intent.putExtra("Id",Integer.toString(itemList.get(i).getId()));
+                intent.putExtra("IPer",itemList.get(i).getCurrent());
                 mContext.startActivity(intent);
             }
 
